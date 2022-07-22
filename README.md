@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @carlosalopezm
-- 👀 I’m interested in fron-tend design, UI/UX, app design, and back-end design. 
+- 👀 I’m interested in front-end design, UI/UX, app design, and back-end design. 
 - I will soon begin to work more on compilers and inteligent systems.
 
 - 📫 How to reach me:
