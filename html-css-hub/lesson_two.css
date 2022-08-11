@@ -1,0 +1,61 @@
+#sizeAndFamily h2, #sizeAndFamily strong, #sizeAndFamily h3, #sizeAndFamily p, #sizeAndFamily ul, #sizeAndFamily li{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.8em;
+}
+p.vip {
+    font-size: 1.5em;
+    color: gold;
+    background-color: black;
+}
+.vip-h {
+
+    font-size: 2em;
+    color: gold;
+    background-color: black;
+} 
+.alt {
+
+    font-size: 1.5em;
+    
+} 
+p.weighted {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.italicized{
+    font-style: italic;
+    font-size: 1.2em;
+
+}
+.different {
+    font-size: 1.95em;
+    color: black;
+    background-color: gold;
+}
+.letters-spaced{
+    letter-spacing: 1.15em;
+}
+.words-spaced {
+    word-spacing: 1.95em;
+
+}
+
+.aligned-left {
+    text-align: left ;
+
+}
+.aligned-center {
+    text-align: center ;
+
+}
+.aligned-right {
+    text-align: right ;
+
+}
+.indented {
+    text-indent: 2em;
+}
+blockquote {
+    color: blue; 
+}
+
