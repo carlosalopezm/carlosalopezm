@@ -1,0 +1,562 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="./lesson_two.css" />
+    </head>
+    <body> 
+        <br> 
+            <hr> 
+            <hr>
+        <h1> More HTML and CSS Basics </h1>
+        <br> 
+            <hr> 
+            <hr>
+        <p> The Cascading style sheet is used to style your website.</p>
+        <p> Reminder, as we progress, portion sof this site will begin to look different because I designed it to intuitively show you how it changes as we progress in our CSS journey</p>
+
+        <h4> How do you create a cascading style sheet for your website?</h4>
+        <ol>
+            <li> Get an integrated development environment such as <a href="https://code.visualstudio.com">Visual Studio Code </a></li>
+            <li> Create a document that follows the css naming conventions: use lowercase characters, avoid spaces (use underscores), use alphanumeric characters (0-9,a-z, and A-Z), and end the document with the ".css" extension</li>
+        </ol>
+
+        <h4> How do you link a cascading style sheet to your website?</h4>
+        <p> In the head tags add a link tag with the following properties</p>
+        <ol>
+            <li> Write the opening link tag without closing it: <code> &lt;link </code></li>
+            <li>Add a rel equation set to the value of stylesheet: <code> &lt;link rel="stylesheet" </code> </li>
+            <li>Add a type equation set to the value of text/css: <code> &lt;link rel="stylesheet" type="text/css"</code>  </li>
+            <li>Add an href equation (hyper text reference equation) set to the path assigned to your css file: <code> &lt;link rel="stylesheet" type="text/css" href="./stylesheet.css"</code></li>
+            <li> Finaly, do not pair with a closing tag such as <code> &lt;/link&gt;</code>. Simply use the following closing tag: <code> /&gt;</code></li>
+        </ol>
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+
+            <br> 
+            <hr> 
+            <hr>
+
+        <h2> Specifying Fonts</h2>
+        <p>Inside your css document you can specify the font family of HTMl elements. To do so simply follow the steps below.</p>
+        <ol>
+            <li> Create a css file and link it to your html file</li>
+            <li> Write the element identifier (eg p, h1, and h2)</li>
+            <li> After writing the element identifier add brackets {}</li>
+            <li> Within the brackeets write font-family followed by a colon: p { font-family: }</li>
+            <li> After the colon add a space and write the font stack. A font stack is a list of 
+                fonts, other than the default sans-serif and serif, that the browser can use in case the first choice isn't installed in the computer.</li>  
+            <li> Finally, add a semicolon</li>
+        </ol>
+        <p> Your css file will look similar to the text below if you wanted to style only the h1 and h2 headers, and the paragraph elements.</p>
+        <p> h1 { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif; <br> } </p>
+        <p> h2 { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif; <br> } </p>
+        <p> p { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif; <br> } </p>
+
+        <br> 
+        <br> 
+        <div id="sizeAndFamily">
+            <br> 
+            <hr> 
+            <hr>
+            <h2> <strong>Specifying a Font Size</strong></h2>
+            <p>Inside your css document you can specify the font size of HTMl elements. Right now, I will style the elements of this lesson such that they are 180% of their default size. To do so simply follow the steps below.</p>
+            <ol>
+                <li> Write the element identifier add brackets {}</li>
+                <li> Within the brackeets write font-size followed by a colon: p { font-family: }</li>
+                <li> After the colon add a space and write a real number greater than 0 followed by the letters em to specify what percentage of the default size you will use.</li>  
+                <li> Finally, add a semicolon</li>
+            </ol>
+            <p> Your css file will look similar to the text below if you wanted to style only the h1 and h2 headers, and the paragraph elements.</p>
+            <p> h1 { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif; <br>  &emsp; &emsp; font-size: 1.2em; <br> } </p>
+            <p> h2 { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif;<br>  &emsp; &emsp; font-size: 0.9em; <br> } </p>
+             <p> p { <br> &emsp; &emsp; font-family:  Georgia, "Times New Roman", Times, serif; <br>  &emsp; &emsp; font-size: 1.5em;<br> } </p>
+             <br> 
+            <p> As shown above the font size of h1 will be 120% of the default, whereas the font-size of h2 and p will be 90% and 150% of their default size, respectively.</p>
+        </div>
+
+        <div>
+            <br> 
+            <hr> 
+            <hr>
+            <h2>CSS Classes for Particular Elements</h2>
+            <p>You can use a class equation within the opening tag of your html element to later on identify all particular html elements with that class in your CSS document. To do so follow the steps below.</p>
+            <ol>
+                <li> Within the opening tag of your html element add the class equation and set it equal to the name of your class: <code>&lt;p class="myClass"&gt;</code></li>
+                <li> Within the CSS document write the element tag, a period followed by the class name, and the body brackets: <code>p.myClass { <br> };</code></li>
+            </ol>
+            <p>The code below shows some HTML elements set to a class</p>
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="vip"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="vip"&gt; This is the VIP paragraph &lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't a  VIP paragraph &lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+
+            <p> <strong>The css doc</strong></p>
+            <p> p.vip { <br> &emsp; &emsp; font-size: 1.5em; <br> &emsp; &emsp; color: gold; <br> &emsp; &emsp; background-color: black; <br>} </p>
+        </div>
+
+        <div>
+            <br> 
+            <hr> 
+            <hr>
+            <h2>CSS Classes for Elements</h2>
+            <p>You can use a class equation within the opening tag of your html element to later on identify all particular html elements with that class in your CSS document. To do so follow the steps below.</p>
+            <ol>
+                <li> Within the opening tag of your html element add the class equation and set it equal to the name of your class: <code>&lt;p class="myClass"&gt;</code></li>
+                <li> Within the CSS document, write a period followed by the class name, and the body brackets: <code>p.myClass { <br> };</code></li>
+            </ol>
+            <p>The code below shows some HTML elements set to a class</p>
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="vip-h"> <code> &emsp; &emsp; &emsp; &emsp; &lt;h4 class="vip"&gt; This is the VIP header &lt;/h4&gt;</code></p>
+            <p class="alt"> <code> &emsp; &emsp; &emsp; &emsp; &lt;h4 &gt; This isn't a VIP header &lt;/h4&gt;</code></p>
+            <p class="vip"> <code> &emsp; &emsp; &emsp; &emsp; &lt;p class="vip"&gt; This is the VIP paragraph &lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't a  VIP paragraph &lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <p> <strong>The CSS doc</strong></p>
+            <p> .vip { <br> &emsp; &emsp; font-size: 1.5em; <br> &emsp; &emsp; color: gold; <br> &emsp; &emsp; background-color: black; <br>} /p>
+        </div>
+
+        <div> 
+            <br> 
+            <hr> 
+            <hr>
+            <h2> Font Weight</h2>
+            <br> 
+            <p> You can use css element called font-weight to specify how bold the text ought to be. To do so follow the steps below</p>
+            <ol> 
+                <li> Choose wheter you want to change the font weight of all tags or tags with a particular class</li>
+                <li> Within your CSS file, specify in the body of the tag or class the weight of the text using a number from 0 to 900: p { <br> &emsp; &emsp; font-weight: 900 <br> } </li>
+            </ol>
+            <p>The code below shows some HTML elements that are weighted</p>
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="weighted"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="weighted"&gt; This is the weighted paragraph &lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't a  weighted paragraph &lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+
+            <p> <strong>The css doc only specifies it for the paragraph elemnt for the sake of simplicity</strong></p>
+            <p> p.weighted { <br> &emsp; &emsp; font-weight: 900; <br> &emsp; &emsp; font-size: 1.2em; <br>} </p>
+        </div>
+
+        <div> 
+            <br> 
+            <hr> 
+            <hr>
+            <h2> Font Style</h2>
+            <br> 
+            
+            <p> You can use certain css elements to make words in html elements italicized or bold using font-style</p>
+            <ol> 
+                <li> Choose wheter you want to change the font weight of all tags or tags with a particular class</li>
+                <li> Within your CSS file, specify in the body of the tag or class the weight of the text using a number from 0 to 900: p { <br> &emsp; &emsp; font-weight: 900 <br> } </li>
+            </ol>
+            <br> 
+            <p> <b>Please note: </b>You can italicize words within HTML docs by placing them between the &lt;i&gt;&lt;/i&gt; tags.</p>
+            <p> <b>Please note: </b> You can make words appear bold within HTML docs by placing them between the &lt;b&gt;&lt;/b&gt; tags.</p>
+            <p> <b>Please note: </b> You can emphasize words within HTML docs by placing them between the &lt;em&gt;&lt;/em&gt; tags.</p>
+            <br>
+            <p>HTML file</p>
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="italicized"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="italicized"&gt; This is the paragraph that was italicized using CSS &lt;/p&gt;</code></p>
+            <p class="weighted"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="weighted"&gt; This is the paragraph that was made bold using CSS &lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't an italicized paragraph, </code> but the word &lt;b&gt;<b>"bold"</b>&lt;/b&gt; is bold because I used the &lt;b&gt;&lt;/b&gt; tags. <code>&lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't an italicized paragraph, </code> but the word &lt;i&gt;<i>"italicized"</i>&lt;/i&gt; is italicized because I used the &lt;i&gt;&lt;/i&gt; tags. <code>&lt;/p&gt;</code></p>
+            <p> <code> &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This isn't an italicized paragraph, </code> but the word &lt;em&gt;<em>"emphasized"</em>&lt;/em&gt; is emphasized because I used the &lt;em&gt;&lt;/em&gt; tags. <code>&lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+
+            <p> CSS file (<strong>The css file only specifies it for the paragraph element for the sake of simplicity</strong>)</p>
+            <p> p.weighted { <br> &emsp; &emsp; font-weight: 900; <br> &emsp; &emsp; font-size: 1.2em; <br>} </p>
+            <p> .italicized { <br> &emsp; &emsp; font-style: italic; <br> &emsp; &emsp; font-size: 1.2em; <br>} </p>
+
+ 
+        </div>
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Styling Segments Using span</b></h2>
+            <br> 
+            <p>You can style bits of text within html elements using span. To do so follow the steps below. </p>
+            <ol>
+                <li> Within the html element, write the bits you want to style differently using span tags with a class equation set to a particular class name.</li>
+                <li> Specify the styling you want to provide in your CSS file </li>
+            </ol>
+            <p> The example below shows how you can style the </p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="vip"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="vip"&gt; There is a portion of text that &lt;span&gt;<span class="different"> looks differently </span>&lt;/span&gt;
+                in this paragraph &lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+
+            <p> CSS file (<strong>The css file only specifies it for the paragraph element for the sake of simplicity</strong>)</p>
+            <p> p.vip { <br> &emsp; &emsp; font-size: 1.5em; <br> &emsp; &emsp; color: gold; <br> &emsp; &emsp; background-color: black; <br>} </p>
+            <p> .different { <br> &emsp; &emsp; font-size: 1.95em; <br> &emsp; &emsp; color: black; <br> &emsp; &emsp; background-color: gold; <br>} </p>
+
+
+        </div>
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Styling With Color</b></h2>
+            <br> 
+            <p>You can provide color and a background color to HTML elements. To do so follow the steps below. </p>
+            <ol>
+                <li> In your CSS file, specify the color and background-color you want to provide in the elements respective body.</li>
+            </ol>
+            <p> The example below shows how you can style the </p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p class="vip"> <code> &emsp; &emsp; &emsp;  &emsp; &lt;p class="vip"&gt; This text has color &lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+<hr>
+            <p> CSS file</p>
+            <p> p.vip { <br> &emsp; &emsp; font-size: 1.5em; <br> &emsp; &emsp; color: gold; <br> &emsp; &emsp; background-color: black; <br>} </p>
+
+
+        </div>
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Letter and Word Spacing</b></h2>
+            <br> 
+            <p>You can add additional space between letters and words. To do so follow the steps below. </p>
+            <ol>
+                <li> For letter space, in your CSS file, write the 
+                    letter-spacing keyword followed by a floating-point number that specifies the percentage of space you want compared to the average: letter-spacing: 1.5em </li>
+                 <li> For word space, in your CSS file, write the 
+                    word-spacing keyword followed by a floating-point number that specifies the percentage of space you want compared to the average: word-spacing: 1.5em </li>
+            </ol>
+            <p> The example below shows how you can style the </p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;p class="letters-spaced"&gt; <span class="letters-spaced">This text has 15% more space between its letters.</span> &lt;/p&gt;</code></p>
+            <p > <code>  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;p class="words-spaced"&gt; <span class="words-spaced">This text has 95% more space between its words. </span>&lt;/p&gt;</code></p>
+            <p><code> &emsp; &emsp; &emsp; &emsp;  &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+<hr>
+            <p> CSS file</p>
+            <p> .letters-spaced { <br> &emsp; &emsp; letter-spacing: 1.15em <br>} </p>
+            <p> .words-spaced { <br> &emsp; &emsp; word-spacing: 1.95em <br>} </p>
+
+
+        </div>
+
+
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Aligning Text</b></h2>
+            <br> 
+            <p>You can align text. To do so follow the steps below. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    text-align keyword followed by the words left, center, or right: text-align: center </li>
+            </ol>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="aligned-left"&gt;This text will be aligned to the left. &lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="aligned-center"&gt;This text will be aligned to the center. &lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="aligned-right"&gt;This text will be aligned to right.</span>&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> CSS file</p>
+            <p> .aligned-left { <br> &emsp; &emsp; text-align: left; <br>} </p>
+            <p> .aligned-center { <br> &emsp; &emsp; text-align: center; <br>} </p>
+            <p> .aligned-right { <br> &emsp; &emsp; text-align: right; <br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="aligned-left"> This text will be aligned to the left.</p>
+            <p class="aligned-center"> This text will be aligned to the center.</p>
+            <p class="aligned-right"> This text will be aligned to right.</p>
+
+
+
+        </div>
+
+        
+
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>First Line Indent and Blockquote</b></h2>
+            <br> 
+            <p>You can indent text. To do so follow the steps below. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    text-align keyword followed by the words left, center, justify or right: text-align: center </li>
+            </ol>
+            <p>justify: It stretches the text of paragraph to set the width of all lines equal. However, it is not included in the examples.</p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="indented"&gt;This text will be indented. What is surprising about this text is that it also contains a block quote. 
+                You dont belive me just watch. Sorry to keep you waiting here it comes. Nah, I lied i was just chewing my drawing pencil &lt;blockquote&gt;now I do not know if it is 2B or not 2B.&lt;/blockquote&gt;Help this is serious I do not whether tis nobler to throw hands or something.&lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p&gt;This text will not be indented to the left. It is just plain text. Blah blah blah blah blah. I actually have a lawyer called Bob Low whose firm is called Bob Low Law</span>&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> CSS file</p>
+            <p> .indented { <br> &emsp; &emsp; text-indent: 2em; <br>} </p>
+            <p> blockquote { <br> &emsp; &emsp; color: blue; <br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="indented"> This text will be indented. What is surprising about this text is that it also contains a block quote. You dont belive me just watch. Sorry to keep you waiting here it comes. Nah, I lied I was just chewing my drawing pencil <blockquote>Now I do not know if it is 2B or not 2B.</blockquote>.Help this is serious. I do not whether tis nobler to throw hands or something.</p>
+            <p> This text will not be indented to the left. It is just plain text. Blah blah blah blah blah. I actually have a lawyer called Bob Low whose firm is called Bob Low Law</p>
+        </div>
+
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Margins</b></h2>
+            <br> 
+            <p>You can choose how much space your text will have at the top, right, left and bottom. To do so follow the steps below. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    margin keyword followed by a colon. </li>
+                <li>The order starts at the top margin and goes clockwise until the left margin: margin: 1em, 2em 1.3em 1.6em</li>
+                <li>You can also specify the margins separately by writing margin-top, margin-right, margin-bottom, and margin-left: margin-top: 2em </li>
+                </ol>
+            <p>example.html</p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="bottom-margin"&gt; This paragraph will have a large bottom margin. Hence the space between paragraphs will increase.&lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="top-margin"&gt; This paragraph will be further from the upper paragraph than the one below it.&lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p&gt;This paragraph has normal padding.&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> style.css</p>
+            <p> .bottom-margin { <br> &emsp; &emsp; margin: 1sem 1em 5em 1em; <br>} </p>
+            <p> .top-margin { <br> &emsp; &emsp; margin: 5em; <br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="bottom-margin">This paragraph will have a large bottom margin. Hence the space between paragraphs will increase.</p>
+            <p class="top-margin">This paragraph will be further away from the paragraph above it than it is from the paragraph below it.</p>
+            <p> This paragraph has normal padding. blah blah blah. I have a lawyer called Bob Lob whose partner is called Lob Bob and they own a law firm called Bob Lob Law</p>
+        </div>
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Borders</b></h2>
+            <br> 
+            <p>In HTML, you can add a border to any text To do so follow the steps below. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    border keyword followed by a colon. </li>
+                <li>First, you specify the thickness of the border in pixels: border: 5px (no space between the number and px)</li>
+                <li>Second, you specify the style using either dotted, dashed, solid, double, groove, ridge, inset, and outset: border: 5px solid </li>
+                <li>Third, you specify the color of the border: border: 5px solid yellow</li>
+                <li>You can also specify the thickness, style, and color of the top (border-top), right (border-right), bottom (border-bottom), and left (border-left).</li>
+                </ol>
+            <p>example.html</p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="yellow-border"&gt; This paragraph will have a thick yellow border &lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="multi-border"&gt; This paragraph will colorful border of different styles.&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> style.css</p>
+            <p> .yellow-border{ <br> &emsp; &emsp; border: 5px solid yellow; <br>} </p>
+            <p> .multi-border { <br> &emsp; &emsp; border-top: 3px dashed red; &emsp; &emsp; border-right: 6px solid blue;  &emsp; &emsp; border-bottom: 8px ridge green; &emsp; &emsp; border-left: 12px dotted orange; <br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="yellow-border"> This paragraph will have a thick yellow border</p>
+            <p class="multi-border">This paragraph will have a colorful border with different styles.</p>
+        </div>
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Padding</b></h2>
+            <br> 
+            <p>In HTML, you can add a border with padding to provide a better look to your text. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    padding keyword followed by a colon. </li>
+                <li>First, you specify the top and move clockwise until the left: padding: 2em 1.5em 4em 5em</li>
+                <li>You can also specify the padding of the top (padding-top), right (padding-right), bottom (padding-bottom), and left (padding-left).</li>
+                </ol>
+            <p>example.html</p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="yellow-border-pad"&gt; This paragraph will have a thick yellow border &lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="multi-borderpad"&gt; This paragraph will colorful border of different styles.&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> style.css</p>
+            <p> .yellow-border-pad{ <br> &emsp; &emsp; border: 5px solid yellow; <br> &emsp; &emsp; padding-top: 3em; <br> &emsp; &emsp; padding-right: 3em; <br> &emsp; &emsp; padding-bottom: 3em; <br> &emsp; &emsp; padding-left: 3em;<br>} </p>
+            <p> .multi-border-pad{ <br> &emsp; &emsp; border-top: 3px dashed red; <br> &emsp; &emsp; border-right: 6px solid blue; <br> &emsp; &emsp; border-bottom: 8px ridge green; <br> &emsp; &emsp; border-left: 12px dotted orange; <br> &emsp; &emsp; padding: 3em 3em 3em 3em;<br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="yellow-border-pad"> This paragraph will have a thick yellow border and nice padding</p>
+            <p class="multi-border-pad">This paragraph will have a colorful border with different styles and nice padding.</p>
+        </div>
+
+
+        <div> 
+            <br>
+            <hr>
+            <hr> 
+            <h2><b>Padding</b></h2>
+            <br> 
+            <p>In HTML, you can add a border with padding to provide a better look to your text. </p>
+            <ol>
+                 <li> In your CSS file, write the 
+                    padding keyword followed by a colon. </li>
+                <li>First, you specify the top and move clockwise until the left: padding: 2em 1.5em 4em 5em</li>
+                <li>You can also specify the padding of the top (padding-top), right (padding-right), bottom (padding-bottom), and left (padding-left).</li>
+                </ol>
+            <p>example.html</p>
+            <br> 
+            <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p> <code>&lt;html&gt;</code></p>
+            <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+            <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+            <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+            <br>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="yellow-border-pad"&gt; This paragraph will have a thick yellow border &lt;/p&gt;</code></p>
+            <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p class="multi-borderpad"&gt; This paragraph will colorful border of different styles.&lt;/p&gt;</code></p>
+            <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+            <p><code>&lt;\html&gt;</code></p>
+            <hr>
+            <p> style.css</p>
+            <p> .yellow-border-pad{ <br> &emsp; &emsp; border: 5px solid yellow; <br> &emsp; &emsp; padding-top: 3em; <br> &emsp; &emsp; padding-right: 3em; <br> &emsp; &emsp; padding-bottom: 3em; <br> &emsp; &emsp; padding-left: 3em;<br>} </p>
+            <p> .multi-border-pad{ <br> &emsp; &emsp; border-top: 3px dashed red; <br> &emsp; &emsp; border-right: 6px solid blue; <br> &emsp; &emsp; border-bottom: 8px ridge green; <br> &emsp; &emsp; border-left: 12px dotted orange; <br> &emsp; &emsp; padding: 3em 3em 3em 3em;<br>} </p>
+
+            <hr> 
+            <p><b>Result:</b></p>
+            <p class="yellow-border-pad"> This paragraph will have a thick yellow border and nice padding</p>
+            <p class="multi-border-pad">This paragraph will have a colorful border with different styles and nice padding.</p>
+        </div>
+        <br>
+        <hr> 
+        <hr> 
+        <h1 id="end">The end</h1>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    </body>
+</html>

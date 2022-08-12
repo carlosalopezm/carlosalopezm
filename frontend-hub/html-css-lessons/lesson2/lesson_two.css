@@ -1,0 +1,104 @@
+#sizeAndFamily h2, #sizeAndFamily strong, #sizeAndFamily h3, #sizeAndFamily p, #sizeAndFamily ul, #sizeAndFamily li{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.8em;
+}
+p.vip {
+    font-size: 1.5em;
+    color: gold;
+    background-color: black;
+}
+.vip-h {
+
+    font-size: 2em;
+    color: gold;
+    background-color: black;
+} 
+.alt {
+
+    font-size: 1.5em;
+    
+} 
+p.weighted {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.italicized{
+    font-style: italic;
+    font-size: 1.2em;
+
+}
+.different {
+    font-size: 1.95em;
+    color: black;
+    background-color: gold;
+}
+.letters-spaced{
+    letter-spacing: 1.15em;
+}
+.words-spaced {
+    word-spacing: 1.95em;
+
+}
+
+.aligned-left {
+    text-align: left ;
+
+}
+.aligned-center {
+    text-align: center ;
+
+}
+.aligned-right {
+    text-align: right ;
+
+}
+.indented {
+    text-indent: 2em;
+}
+blockquote {
+    color: blue; 
+}
+
+.bottom-margin{
+    margin: 0em 0em 5em 0em;
+}
+.top-margin{
+    margin-top: 5em;
+}
+
+.yellow-border{
+    
+    border: 5px solid yellow;
+}
+.multi-border{
+     
+     border-top: 3px dashed red; 
+     border-right: 6px solid blue;  
+     border-bottom: 8px ridge green; 
+     border-left: 12px outset orange; 
+
+}
+
+.yellow-border-pad{
+    padding-top: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    border: 5px solid yellow;
+}
+
+.multi-border-pad {
+    padding: 3em 3em 3em 3em;
+    border-top: 3px dashed red; 
+    border-right: 6px solid blue;  
+    border-bottom: 8px ridge green; 
+    border-left: 12px outset orange; 
+
+}
+#end {
+    weight: 900; 
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+
