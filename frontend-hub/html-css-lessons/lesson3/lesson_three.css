@@ -1,0 +1,84 @@
+
+body{
+    background-image:url('./images/backg.jpeg')
+
+}
+#begin {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #FFFFFF;
+    text-align: center;
+    border: 5px inset black;
+}
+.lesson{
+    border: 10px inset #ffffff;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+   
+    background-image:url('./images/backg.jpeg')
+}
+.lesson-header {
+    weight: 900;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #FFFFFF;
+}
+.code{
+    border: 1.8px solid black;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: #FFFFFF;
+
+}
+.doc-name {
+    text-align: center; 
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: #FFFFFF;
+}
+/* Inheritance lesson */
+.inheritance-example {
+    background-color: pink;
+    border: 5px solid blue;
+    padding: 3em 3em 3em 3em;
+}
+
+/* id lesson */
+#right-blue{
+
+    text-align: right;
+    color: #0000ff;
+
+}
+
+/* Grouping lesson */
+.grouping-example{
+    color: #0000ff;
+    background-color: pink;
+    border: 5px solid blue;
+    padding: 3em 3em 3em 3em;
+}
+
+/* table lesson */
+table{
+    text-align: center;
+    border: 5px solid blue;
+    border-spacing: 0.5em;
+
+}
+
+td, th {
+
+    padding: 1.5em;
+    border: 3px dotted red; 
+}
+
+.odd-row {
+
+    color: yellow; 
+    background-color: green; 
+}
+
+.even-row {
+
+    color: pink; 
+    background-color: #2494d2;
+    
+}
+

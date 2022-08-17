@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lesson 3: More HTML and CSS for Functional Static Websites</title>
+        <link rel="stylesheet" text="text/css" href="./lesson_three.css"/>
+    </head>
+    <body>
+        <hr>
+        <hr>
+        <h1 id="begin"><b>More HTML and CSS for Functional Static Webistes</b></h1>
+        <br>
+        <hr>
+        <hr>
+        <div>
+            <!--This is the begining of the outermost div-->
+            <!--Lesson on Inheritance-->
+            <div class="lesson">
+                <h2 class="lesson-header">Inheritance</h2>
+                <br> 
+                <div class="code">
+                    <p>
+                        Inheritance is an efficiency feature of CSS. This efficiency feature of CSS makes use of the parent and child structure of HTML files.
+                        For instance, every element inside the body tags (&lt;body&gt;&lt;/body&gt;) is a child element of the html body element. Likwise, the HTML head and body 
+                        are children of the html element (&lt;html&gt;&lt;/html&gt;).
+                    </p>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;h4&gt; This header is a child element of the body element.&lt;/h4&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This paragraph will be surrounded by a solid 5px blue border and will have a pink background because it is a child elemnt of the html body &lt;/p&gt;</code></p>
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <p><code>&lt;\html&gt;</code></p>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name"> style.css</p>
+                    <p> body{ <br> &emsp; &emsp; background-color: pink; <br> &emsp; &emsp; border: 5px solid blue; <br> &emsp; &emsp; padding: 3em 3em 3em 3em; <br>} </p>
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <div class="inheritance-example">
+                        <h4>This header is a child element of the body element.</h4>
+                        <p> This paragraph will be surrounded by a solid 5px blue border and will have a pink background because it is a child element of the html body</p>
+
+                    </div>
+                </div>
+                   
+            </div>
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+            <!--ID lesson-->
+
+            <div class="lesson">
+                <h2 class="lesson-header">IDs</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can specify an ID for elements that require an specific styling. To do so follow the steps below. 
+                    </p>
+                    <ol>
+                        <li>In the opening tag of the element taht requires particular styling, write id and equate it to a string with the particular ID.</li>
+                        <li>ID should follow the following conventions: lowercase letters, no spaces (use underscores), use alaphanumeric characters (0-9,a-z, A-Z, _), start with a letter. </li>
+                    </ol>
+                
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;h4 id="right-blue"&gt; This header is blue and aligned to the right because it has an id of right-blue.&lt;/h4&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p id="pink-blue"&gt; This paragraph will be surrounded by a solid 5px blue border and will have a pink background because it has an id of pink-blue &lt;/p&gt;</code></p>
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <p><code>&lt;\html&gt;</code></p>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name"> style.css</p>
+                    <p> #pink-blue{ <br> &emsp; &emsp; background-color: pink; <br> &emsp; &emsp; border: 5px solid blue; <br> &emsp; &emsp; padding: 2em 2em 2em 2em; <br> &emsp; &emsp; <br>} </p>
+                    <p> #right-blue{ <br> &emsp; &emsp; border: 5px solid blue; <br> &emsp; &emsp; padding-top: 3em; <br> &emsp; &emsp; padding-right: 3em; <br> &emsp; &emsp; padding-bottom: 3em; <br> &emsp; &emsp; padding-left: 3em;<br>} </p>
+
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <h4 id="right-blue"> This header is blue and aligned to the right because it has an id of right-blue</h4>
+                    <div class="inheritance-example">
+                        <p>  This paragraph will be surrounded by a solid 5px blue border and will have a pink background because it has an id of pink-blue</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!--Grouping lesson-->
+            <div class="lesson">
+                <h2 class="lesson-header">Grouping</h2>
+                <div class="code">
+                    <p> In your CSS file, enlist all elements you want to style in a group and then write in between the brackets all the specirication you desire. 
+                        This will help you style multiple elements at once. 
+                    </p>
+                
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;h4&gt; This header is blue, will be surrounded by a solid 5px blue border, and will have a pink background. &lt;/h4&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;p&gt; This paragraph is blue, will be surrounded by a solid 5px blue border, and will have a pink background. &lt;/p&gt;</code></p>
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <p><code>&lt;\html&gt;</code></p>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name"> style.css</p>
+                    <p> h4, p{  <br> &emsp; &emsp; color: #0000ff; <br> &emsp; &emsp; border: 5px solid blue; <br> &emsp; &emsp; padding-top: 3em; <br> &emsp; &emsp; padding-right: 3em; <br> &emsp; &emsp; padding-bottom: 3em; <br> &emsp; &emsp; padding-left: 3em;<br>} </p>
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <div class="grouping-example">
+                        <h4>This header is blue, will be surrounded by a solid 5px blue border, and will have a pink background.</h4>
+                        <p> This paragraph is blue, will be surrounded by a solid 5px blue border, and will have a pink background. </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!--table lesson-->
+            <div class="lesson">
+                <h2 class="lesson-header">Tables</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create tables. Use the 2x2 table below to create new tables with distinct features. 
+                        Lastly, there will more examples following this one. 
+                    </p>
+                    <p>Facts about tables</p>
+                    <ol>
+
+                        <li>The table is always enclosed between the table tags:  &lt;table&gt; &lt;/table&gt;</li>
+                        <li>The table rows are enclosed between the tr tags:  &lt;tr&gt; &lt;/tr&gt;</li>
+                        <li>The table rows are enclosed between the tr tags:  &lt;tr&gt; &lt;/tr&gt;</li>
+                        <li>
+                            The table data is always enclosed between the td tags (&lt;td&gt; &lt;/td&gt;) and lie between the table row tags. Hence each td tag between the tr tags represents a column. 
+                        </li>
+                        <li>The table headers are always enclosed between the th tags:  &lt;th&gt; &lt;/th&gt;</li>
+                        <li>Each tag can be assigned to a class to style it.</li>
+                        <li>You can provide border to a table in css </li>
+                        <li>
+                            If you specify the header and data width, the browser will adjust text acording to the specified table width. 
+                            <br> Otherwise, the browser will simply adjust the header size or data cell to the text's size.: td, th { <br> width: 75% <br> } 
+                            <br> The example above shows that the data cell and header cell will hav a width equal to 75% of the windows width or 75% of the div's width. 
+                        </li>
+                        <li>You can align text in the table, a specific row, a specific header, or an specific data cell.</li>
+                        <li>You can make data cells that span more than one row or column by specfying the rowspan or colspan in the opening td tag.</li>
+
+
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;table&gt;</code> </p> 
+                    <!--first row for headers -->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;tr&gt;</code> </p> 
+                    <!-- table headers-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;th scope="col"&gt;&lt;/th&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;th scope="col"&gt; First Column &lt;/th&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;th scope="col"&gt; Second Column &lt;/th&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td rowspan="3"&gt; Rowspan Example &lt;/td&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/tr&gt;</code> </p> 
+                    <!--End of row for  table headers-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;tr&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;th scope="row"&gt; First Row&lt;/th&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td class= "odd-row"&gt; Row 1, Column 1 &lt;/td&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td class= "odd-row"&gt; Row 1, Column 2 &lt;/td&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/tr&gt;</code> </p> 
+                    <!--second row-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;tr&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;th scope="row"&gt; Second Row&lt;/th&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td class= "even-row"&gt; Row 2, Column 1 &lt;/td&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td class= "even-row"&gt; Row 2, Column 2 &lt;/td&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td colspan="3"&gt; Colspan Example &lt;/td&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/tr&gt;</code> </p> 
+                    <!--second row-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;td colspan="4"&gt; Colspan Example &lt;/td&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/tr&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/table&gt;</code></p>
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name"> style.css</p>
+                    <p> table {  <br> &emsp; &emsp; text-align: center; <br> &emsp; &emsp; border: 5px solid blue; <br> &emsp; &emsp; border-spacing: 0.5em; <br>} </p>
+                    <p> td, th {  <br> &emsp; &emsp; padding: 1.5em; <br> &emsp; &emsp; border: 3px dotted red; <br>} </p>
+                    <p> .odd-row {  <br> &emsp; &emsp; color: yellow;  <br> &emsp; &emsp; background-color: green;  <br>} </p>
+                    <p> .even-row {  <br> &emsp; &emsp; color: pink;  <br> &emsp; &emsp; background-color: #2494d2;  <br>} </p>
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <table> 
+                        <tr> 
+                            
+                            <th></th>
+                            <th scope="col">First Column</th>
+                            <th scope="col"> Second Column</th>
+                            <td rowspan="3"> Rowspan Example</td>
+                            
+                        </tr>
+                        <tr class="odd-row"> 
+                            <th scope="row">First Row</th>
+                            <td>Row 1, Column 1</td>
+                            <td>Row 1, Column 2</td>
+                            
+                        </tr>
+
+                        <tr class="even-row"> 
+                            <th scope="row">Second Row</th>
+                            <td>Row 2, Column 1</td>
+                            <td>Row 2, Column 2</td>
+                           
+                        </tr>
+                        <tr> 
+                            
+                            <td colspan="4">Colspan Example</td>
+                           
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!-- Forms lesson for text -->
+            <div class="lesson">
+                <h2 class="lesson-header">Forms Part 1: Text</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create forms that accept text input of a certain character length. 
+                    </p>
+                    <p>Facts about text forms</p>
+                    <ol>
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li>You have to add a lable tag: &lt;label&gt;</li>
+                        <li>You have to add an input tag: &lt;input&gt;</li>
+                        <li>The type element inside the input tag has to be set to text: &lt;input type="text" /&gt;</li>
+                        <li>The name element inside the input tag has to be set to a reasonable name for your task: &lt;input type="text" name="full-name" /&gt;</li>
+                        <li>The size element inside the input tag tells the browser how wide the box should be: &lt;input type="text" name="full-name" size="40" /&gt;</li>
+                        <li>The maxlength element inside the input tag tells the browser the maximum number of characters that can be written: &lt;input type="text" name="full-name" size="40" maxlength="50" /&gt;</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;form&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Full Name</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;input type="text" name="full-name" size="40" maxlength="50"/&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/form&gt;</code> </p>  
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                <!--End of the html div-->
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">style.css</p>
+                    
+                <!--End of the style.css div-->
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <form action="" method="post"> 
+                        <label>
+                            Full Name: 
+                            <input type="text" name="full-name" size="40" maxlength="50" />
+                        </label>
+                    </form>
+                    <br>
+                
+                <!--End of the result div-->
+                </div>
+            <!--End of the lesson div-->
+            </div>
+
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!-- Forms lesson for text -->
+            <div class="lesson">
+                <h2 class="lesson-header">Forms Part 2: Text-Area and the submit button</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create forms that have a text area spanning an m and n amount of rows and columns, respectively. 
+                    </p>
+                    <p>Facts about textarea forms</p>
+                    <ol>
+
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li>You have to add a textarea tag: &lt;textarea&gt;</li>
+                        <li>Inside the opening textarea tag specify the name, rows and cols: &lt;textarea name="" rows="" cols="" &gt;</li>
+                        <li>Add a textarea closing tag: &lt;/textarea&gt;</li>
+
+                    </ol>
+                    <br> 
+                    <p>Facts about input forms</p>
+                    <ol>
+
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li> Between an input tag specify the type to submit, and set the value element equal to some string: &lt;input type="submit" value="Submit form" /&gt; </li>
+                        <li> 
+                            You can also make you custom button: &lt;input type="image" src="./images/icon.jpeg" alt="submit icon" width="72" height="52"/&gt; 
+                            <br>
+                            Despite the fact that the type is set to image, the browser will know that it is a submit button.
+
+                        </li>
+
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;form&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Full Name</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;input type="text" name="full-name" size="40" maxlength="50"/&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;Message: </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;textarea name="message" rows="6" cols="30"&gt;&lt;/textarea&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="image" src="./images/submit.jpeg" width="72" height="52"/&gt;  &lt;/label&gt;</code> </p> 
+
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/form&gt;</code> </p>  
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                <!--End of the html div-->
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">style.css</p>
+                    
+                <!--End of the style.css div-->
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <form action="" method="post"> 
+                        <label>Full Name: 
+                        <input type="text" name="full-name" size="40" maxlength="50" /> </label>
+                        <br><br>
+                        <label> 
+                        Message: 
+                        <br>
+                        <textarea name="message" rows="6" cols="30"></textarea></label>
+                        <br><br>
+                       <label> <input type="image" src="./images/submit.png" width="72" height="52">></label>
+
+                    </form>
+                    <br>
+                
+                <!--End of the result div-->
+                </div>
+            <!--End of the lesson div-->
+            </div>
+
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!-- Forms lesson for radio buttons -->
+            <div class="lesson">
+                <h2 class="lesson-header">Forms Part 3: Radio Buttons</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create radio buttons. This buttons usually used to get one response out of a set of predefined responses. 
+                    </p>
+                    <p>Facts about radio buttons</p>
+                    <ol>
+
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li>You have to add an input tag: &lt;input /&gt;</li>
+                        <li>Inside the input tag specify the type to radio, specify a name, and a vlaue: &lt;input type="radio" name="how-likeable" value="Not at all" /&gt;</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;form&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Full Name</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;input type="text" name="full-name" size="40" maxlength="50"/&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Do you like this lesson?</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not at All"&gt; &lt;/label&gt;</code> Not at all </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not sure"&gt;</code> Not sure &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="It is ok"&gt; &lt;/label&gt;</code> It is ok </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Obviously"&gt;</code> Obviously &lt;/label&gt; &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp;&lt;label&gt; Message: </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;textarea name="message" rows="6" cols="30"&gt;&lt;/textarea&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="image" src="./images/submit.jpeg" width="72" height="52"/&gt; &lt;/label&gt;</code> </p> 
+
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/form&gt;</code> </p>  
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                <!--End of the html div-->
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">style.css</p>
+                    
+                <!--End of the style.css div-->
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <form action="" method="post"> 
+                        Full Name: 
+                        <input type="text" name="full-name" size="40" maxlength="50" />
+                        <br><br>
+                        Do you like this lesson?
+                        <br>
+                        <input type="radio" name="how-likeable" value="Not at all"/> Not at all </input>
+                        <input type="radio" name="how-likeable" value="Not sure"/>  Not sure </input>
+                        <input type="radio" name="how-likeable" value="It is ok"/> It is ok </input>
+                        <input type="radio" name="how-likeable" value="Obviously"/>  Obviously </input>
+                        <br><br>
+                        Message: 
+                        <br>
+                        <textarea name="message" rows="6" cols="30"></textarea>
+                        <br><br>
+                        <input type="image" src="./images/submit.png" width="72" height="52">
+
+                    </form>
+                    <br>
+                
+                <!--End of the result div-->
+                </div>
+            <!--End of the lesson div-->
+            </div>
+
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!-- Forms lesson for checkbox buttons -->
+            <div class="lesson">
+                <h2 class="lesson-header">Forms Part 4: Checkbox</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create checkbox buttons. This buttons usually used to get multiple or no responses out of a set of predefined responses. 
+                    </p>
+                    <p>Facts about checbox buttons</p>
+                    <ol>
+
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li>You have to add an input tag: &lt;input /&gt;</li>
+                        <li>Inside the input tag specify the type to radio, specify a name, and a vlaue: &lt;input type="radio" name="how-likeable" value="Not at all" /&gt;</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;form&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Full Name</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;input type="text" name="full-name" size="40" maxlength="50"/&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Do you like this lesson?</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not at All"&gt; &lt;/label&gt;</code> Not at all </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not sure"&gt;</code> Not sure &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="It is ok"&gt; &lt;/label&gt;</code> It is ok </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Obviously"&gt;</code> Obviously &lt;/label&gt; &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; What do you like about this lesson?</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feeback" value="background-image"&gt;</code> background image &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feedback" value="borders"&gt;</code> borders &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feedback" value="fonts"&gt;</code> text fonts &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="checkbox" name="feedback" value="content"&gt; &lt;/label&gt;</code> content</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp;&lt;label&gt; Message: </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;textarea name="message" rows="6" cols="30"&gt;&lt;/textarea&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="image" src="./images/submit.jpeg" width="72" height="52"/&gt; &lt;/label&gt;</code> </p>
+
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/form&gt;</code> </p>  
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                <!--End of the html div-->
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">style.css</p>
+                    
+                <!--End of the style.css div-->
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <form action="" method="post"> 
+                        <label>Full Name: 
+                        <input type="text" name="full-name" size="40" maxlength="50" /></label>
+                        <br><br>
+                        <label>
+                            Do you like this lesson?
+                            <br>
+                            <label></label><input type="radio" name="how-likeable" value="Not at all"/> Not at all </input></label>
+                            <label><input type="radio" name="how-likeable" value="Not sure"/>  Not sure </input></label>
+                            <label><input type="radio" name="how-likeable" value="It is ok"/> It is ok </input></label>
+                            <label> <input type="radio" name="how-likeable" value="Obviously"/>  Obviously </input></label>
+                        </label>
+                        <br><br>
+                        <label>
+                            What do you like about this lesson?
+                            <br>
+                            <label><input type="checkbox" name="feedback" value="background-image"/> background image </input></label>
+                            <label><input type="checkbox" name="feedback" value="borders"/> borders </input></label>
+                            <label><input type="checkbox" name="feedback" value="fonts"/> text fonts </input></label>
+                            <label><input type="checkbox" name="how-likeable" value="content"/> content </input></label>
+                        </label>
+                        <br><br>
+                            <label>Message: 
+                            <br>
+                            <textarea name="message" rows="6" cols="30"></textarea></label>
+                        <br><br>
+                        <label><input type="image" src="./images/submit.png" width="72" height="52"></label>
+
+                    </form>
+                    <br>
+                
+                <!--End of the result div-->
+                </div>
+            <!--End of the lesson div-->
+            </div>
+<!--new lesson -->
+
+
+            <br>
+            <hr> 
+            <hr> 
+            <br>
+
+            <!-- Forms lesson for slect box -->
+            <div class="lesson">
+                <h2 class="lesson-header">Forms Part 5: select box</h2>
+                <div class="code">
+                    <p> 
+                        In your CSS file, you can create a select box that enables users to choose one option out of a predefined set of options.</p>
+                    <p>Facts about checbox buttons</p>
+                    <ol>
+
+                        <li>Forms are written bewteen the form tags: &lt;form&gt; &lt;/form&gt; </li>
+                        <li>You have to add the select tags: &lt;select&gt; &lt;/select&gt;</li>
+                        <li>Between the select tags add the option tags: &lt;select&gt; <br> &emsp; &emsp; &lt;option value="San José"&gt; San José&lt;/option&gt;<br> &lt;/select&gt;</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">example.html</p>
+                    <p> <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p> <code>&lt;html&gt;</code></p>
+                    <!--start of head-->
+                    <p> &emsp; &emsp; &emsp; <code> &emsp; &emsp; &lt;head&gt; </code> </p> 
+                     <p>  &emsp; &emsp;  &emsp; &emsp; <code>  &emsp; &emsp; &emsp; &emsp; &lt;link</code> rel="stylesheet" type="text/css" href="./style.css"<code>/&gt;</code> </p> 
+                     <p>&emsp; &emsp; &emsp; &emsp;  &emsp; <code> &lt;/head&gt;</code></p>
+                    <br>
+                    <!--end of head-->
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &lt;body&gt; </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;form&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Full Name</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;input type="text" name="full-name" size="40" maxlength="50"/&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Do you like this lesson?</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not at All"&gt; &lt;/label&gt;</code> Not at all </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Not sure"&gt;</code> Not sure &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="It is ok"&gt; &lt;/label&gt;</code> It is ok </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="radio" name="how-likeable" value="Obviously"&gt;</code> Obviously &lt;/label&gt; &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; What do you like about this lesson?</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feeback" value="background-image"&gt;</code> background image &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feedback" value="borders"&gt;</code> borders &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt;  &lt;input type="checkbox" name="feedback" value="fonts"&gt;</code> text fonts &lt;/label&gt;</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="checkbox" name="feedback" value="content"&gt; &lt;/label&gt;</code> content</p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; Your province: </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; </code> </p>
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;select&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Alajuela"&gt;Alajuela&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Cartago"&gt;Cartago&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Guanacaste"&gt;Guanacaste&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Heredia"&gt;Heredia&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Limon"&gt;Limon&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="Puntarenas"&gt;Puntarenas&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &lt;option value="San Jose"&gt;San Jose&lt;/option&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;/select&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp;&lt;label&gt; Message: </code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;textarea name="message" rows="6" cols="30"&gt;&lt;/textarea&gt; &lt;/label&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;br&gt; &lt;br&gt;</code> </p> 
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &lt;label&gt; &lt;input type="image" src="./images/submit.jpeg" width="72" height="52"/&gt; &lt;/label&gt;</code> </p>
+
+                    <p> <code>  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/form&gt;</code> </p>  
+                     <!--end of the body-->
+                    <p><code>   &emsp; &emsp; &emsp; &emsp; &emsp; &lt;/body&gt;</code></p>
+                    <!--end of html-->
+                    <p><code>&lt;\html&gt;</code></p>
+                <!--End of the html div-->
+                </div>
+                <hr>
+                <div class="code">
+                    <p class="doc-name">style.css</p>
+                    
+                <!--End of the style.css div-->
+                </div>
+
+                 <hr> 
+                <div class="code"> 
+                    <p class="doc-name"><b>Result:</b></p>
+                    <form action="" method="post"> 
+                        <label>Full Name: 
+                        <input type="text" name="full-name" size="40" maxlength="50" /></label>
+                        <br><br>
+                        <label>
+                            Do you like this lesson?
+                            <br>
+                            <label></label><input type="radio" name="how-likeable" value="Not at all"/> Not at all </input></label>
+                            <label><input type="radio" name="how-likeable" value="Not sure"/>  Not sure </input></label>
+                            <label><input type="radio" name="how-likeable" value="It is ok"/> It is ok </input></label>
+                            <label> <input type="radio" name="how-likeable" value="Obviously"/>  Obviously </input></label>
+                        </label>
+                        <br><br>
+                        <label>
+                            What do you like about this lesson?
+                            <br>
+                            <label><input type="checkbox" name="feedback" value="background-image"/> background image </input></label>
+                            <label><input type="checkbox" name="feedback" value="borders"/> borders </input></label>
+                            <label><input type="checkbox" name="feedback" value="fonts"/> text fonts </input></label>
+                            <label><input type="checkbox" name="how-likeable" value="content"/> content </input></label>
+                        </label>
+                        <br><br>
+                        <label>
+                            Your provine:
+                            <br>
+                            <select>
+                                <option value="Alajuela">Alajuela</option>
+                                <option value="Cartago">Cartago</option>
+                                <option value="Guanacaste">Guanacaste</option>
+                                <option value="Heredia">Heredia</option>
+                                <option value="Limon">Limon</option>
+                                <option value="Puntarenas">Puntarenas</option>
+                                <option value="San Jose">San Jose</option>
+                            </select>
+                        </label>
+                        <br><br>
+                            <label>Message: 
+                            <br>
+                            <textarea name="message" rows="6" cols="30"></textarea></label>
+                        <br><br>
+                        <label><input type="image" src="./images/submit.png" width="72" height="52"></label>
+
+                    </form>
+                    <br>
+                
+                <!--End of the result div-->
+                </div>
+            <!--End of the lesson div-->
+            </div>
+<!--new lesson -->
+
+
+
+
+            
+
+
+
+
+        <!--This is the end of the outermost div-->
+        </div>
+
+    </body>
+</html>
