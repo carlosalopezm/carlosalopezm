@@ -2018,3 +2018,38 @@ input, select, textarea {
 			}
 
 	}
+
+	/* proramming bits notes for linux */ 
+	.lesson {
+		border: 5px inset #000000;
+
+
+	}
+	.linux-notes li {
+		display: flex; 
+		flex-direction: row;
+		list-style: none;
+
+	}
+	.linuxlist-img {
+
+		margin: 2px;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;	
+
+	}
+
+	.linuxlist-img-inner{
+
+		margin: 2px;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;	
+
+	}
+
+	.lesson img {
+		max-width: 95%;
+	}
+
