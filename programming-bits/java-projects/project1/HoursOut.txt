@@ -1,0 +1,3 @@
+Enter a number of days that is not greater than six because seven days is equal to a week: 
+ Enter a number of weeks: 
+There are a total of 456 hours in 2 weeks and 5 days.
