@@ -1,0 +1,30 @@
+body {
+    background-image: url("./images/backgl4.jpeg")
+}
+#begin-end {
+
+    weight: 900;
+    color: #ffffff;
+    text-align: center; 
+
+}
+.lesson {
+
+    border: 10px inset #ffffff;
+    padding: 2.5em 2.5em 2.5em 2.5em;
+    
+}
+.lesson-header {
+
+    weight: 900;
+    color: #ffffff;
+    text-align: center;
+
+}
+.code {
+    background-color: #ffffff;
+
+}
+.file-name {
+    text-align: center;
+}

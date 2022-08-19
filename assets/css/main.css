@@ -2052,4 +2052,6 @@ input, select, textarea {
 	.lesson img {
 		max-width: 95%;
 	}
-
+#col-12-lesson{
+	border: 10px inset black; 
+}
