@@ -1,0 +1,13 @@
+CC = gcc 
+CFLAGS = -g -Wall
+LDFLAGS = -g
+
+disemvowel:
+
+.PHONY: clean 
+clean: 
+	rm -f a.out core main disemvowel disemvowel.dSYM
+
+.PHONY: run 
+run: 
+	./disemvowel
