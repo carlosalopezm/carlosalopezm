@@ -1,0 +1,2 @@
+Enter an intenger from one to two billion: 
+Prime 
