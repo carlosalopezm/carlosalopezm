@@ -3,12 +3,6 @@
 //  WordLists.java
 //
 //  Class to aid with Scrabble
-//  Programming Project 5, COMS W1004
-//
-//
-//  Your Name: Carlos López 
-//  Your Uni: cal2266
-//  
 //  This the program that creates the word list for the Scrabble Dictionary Helper.  
 //**************************************
 /**
