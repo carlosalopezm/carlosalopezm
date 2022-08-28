@@ -41,8 +41,27 @@ function init(colorin, elementid) {
 
     return mesh;
   }
-    
 
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+	update(renderer, scene, camera, controls);
+
+  
+      
+
+}
+
+function update(renderer, scene, camera, controls) {
+	renderer.render(
+		scene,
+		camera
+	);
+
+	controls.update();
+
+	requestAnimationFrame(function() {
+		update(renderer, scene, camera, controls);
+	})
 }
 
 init('#00ff00', 'webgl1');
