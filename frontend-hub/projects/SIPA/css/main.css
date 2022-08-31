@@ -10,6 +10,13 @@
 *
 */
 
+.wrapper{
+    width: 100%;
+}
+.section {
+    width: 100%;
+}
+
 .content-top {
     bacground-color: #ffffff;
     color: #2494c2;
@@ -22,6 +29,7 @@
     
 }
 .content-top p{
+    width: 100%;
     color: #2494c2;
     font-size: 13px;
     font-family: Roboto, ariel, sans-serif;
@@ -140,6 +148,7 @@ header content start
 
 #header-ul {
     list-style-type: none;
+    
 }
 #header-li {
     float: left;
@@ -184,7 +193,12 @@ header content start
 	Background-color: #201D5D;
 	margin: 0;
     text-align: right;
-    padding: 0.5em 0.25em 0.65em 1.5em;  
+    padding: 0.5em 0.25em 0.65em 1.5em;
+
+}
+
+.navbar ul {
+    list-style: none;
 }
 
 
@@ -229,8 +243,175 @@ header content start
 
 /*********************************************/
 
-.program-block {
-    background-color: #333333;
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px; /*this limits the width */ 
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    background-color: #2494c2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* this positions the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #201D5D;
+}
+
+/* Caption text */
+.carousel-caption-text {
+    color: #201D5D;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    right:0;
+    bottom: 8px;
+    width: 25%;
+    background-color: grey;
+    
+    text-align: center;
+  }
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #2494C2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.program-block{
+    width: 100%;
+    background-color: #2494C2;
+}
+
+.content {
+
+    margin: 1em;
+    padding: 1.5em 1.75em 3.5em 1.75em;
+}
+
+.extra-large{
+
+    font-size: 1.75em;
+}
+
+.world {
+    font-size:1.5em;
+    color: #fff;
+}
+
+.p-programs {
+    color: #fff;
+    font-size:0.9em;
+    
+}
+
+.programs {
     list-style: none;
-    outline: none;
+    padding-left: 17.5em;
+}
+.programs li{
+    padding: 0em 1.1em 1.1em 1.1em;
+}
+.programs li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.programs li a:hover {
+    color: #201D5D;
+    text-decoration: none;
+}
+
+.arrow {
+    weight: 900;
+    text-height: 1.25em;
+    conten: '\3009'
+}
+
+
+
+li::before:hover{
+    color: #201D5D;
+    content: '\003E';
+    font-size: 1.25em;
+    font-weight: 900;
+}
+
+/*****************?
+/* Perspective Section */
+.perspective {
+    width: 100%;
+    background-color: #201D5D
+}
+.perpective-content {
+    color: white;
+}
+
+#vl {
+    padding: 1em 0.5em 1em 0.1em;
+    border-left: 2px solid white;
+    
+}
+
+#rl {
+    padding: 1.25em 1.25em 1.25em 13.25em;
+}
+
+/* Footer Content */
+
+footer {
+
 }
