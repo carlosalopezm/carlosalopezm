@@ -12,11 +12,12 @@
 
 .wrapper{
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em;
 }
 .section {
     width: 100%;
+    margin: 0em 0em 0em 0em;
 }
 
 .content-top {
@@ -308,6 +309,10 @@ header content start
   .caption-header {
     color: rgb(52, 45, 45)
   }
+  .resize{
+    width: 1000px;
+    height: 500px;
+  }
 
 /* The dots/bullets/indicators */
 .dot {
@@ -455,21 +460,92 @@ li::before:hover{
     text-align: center;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    padding-right: 1.75em;
+    flex-direction: row;
+    display: inline-block;
+
+}
+.info-div{
+    display: inline-block;
+
 }
 .month{
     weight: 900;
     color: #201D5D;
+    
 }
 .date{
 
     weight: 900;
     color: #201D5D;
     font-size: 3.5em;
+    
+    
 
 }
+/*The calendar div contain the small bits of calendars*/
+.calendar{
+    display: flex;
+}
+
+
+
+
+
 .news-p {
     color: #2494C2;
+    display: inline-block;
 }
+.field-name{
+    flex-direction: row;
+    display: inline-block;
+    width: 184px;
+   
+    color: #2494C2;
+    font-size: 1.15em;
+    padding:  0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em;
+}
+.field-name p{
+    top: 0;
+    padding: 0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em;
+    weight: 900;
+}
+.field-dir{
+    padding: 0em 0em 0em 0em;
+    flex-direction: row;
+    width: 184px;
+    height: 44;
+    color: #606364;
+    font-size: 0.65em;
+    margin: 0em 0em 0em 0em;
+}
+.field-dir p {
+
+    margin: 0em 0em 0em 0em;
+    weight: 900;
+
+}
+
+
+.field-time{
+    padding:  0em 0em 0em 0em;
+    flex-direction: row;
+    
+    width: 100;
+    height: 42;
+    color: #606364;
+    font-size: 1em;
+    font-size: 0.65em;
+
+}
+
+.field-time p{
+    margin: 0em 0em 0em 0em;
+    weight: 900;
+}
+
 
 
 
@@ -486,8 +562,37 @@ li::before:hover{
 
 
 }
+.footer-cu-header {
+    color: #201D5D;
+    font-size: 1.5em;
+}
+#larger{
+    font-size: 2.3em;
+}
 .footer-content{
     position: inline-block;
+}
+
+.footer-tb {
+    padding: 1.95em 1.75em 1.5em 3.95em;
+}
+.footer-tb td {
+    margin: 1.35em 1.35em 1.35em 1.35em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+}
+#non-disc {
+    color: #2494C2;
+    weight: 900;
+    font-size: 1.35em;
+}
+
+.footer-left-div {
+
+    padding: 1.95em 1.75em 1.5em 3.95em;
+
+}
+#envelope{
+    color: #201D5D;
 }
 
 
