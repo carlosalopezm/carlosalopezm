@@ -13133,7 +13133,7 @@ div#notebook {
       <li> $\mathcal{\Sigma} \;$ is a finite set called the <b>alphabet</b></li>
       <li>$\mathcal{\delta}: \mathcal{Q} \times \mathcal{\Sigma} \rightarrow \mathcal{Q} \;$ is the <b>transition function</b></li>
       <li> $q_0 \in \mathcal{Q} \;$ is the <b>start state</b></li>
-      <li> $\mathcal{F} \subseteq \;$ is the <b>set of accept states</b></li>
+      <li> $\mathcal{F} \subseteq Q \;$ is the <b>set of accept states</b></li>
   </ol>
 </div></li>
 <li><p>Going back to the M1 automaton, we can se that the format definition of M1 is the following:</p>
@@ -13172,7 +13172,10 @@ div#notebook {
 <li>We say that the machine <strong>M</strong> recognizes $A$ or that <strong>M</strong> accepts $A$</li>
 </ul>
 </li>
-<li>If a machine accepts no strings, it still recognizes one language: <strong>the empty language</strong> $\emptyset$</li>
+<li><p>If a machine accepts no strings, it still recognizes one language: <strong>the empty language</strong> $\emptyset$</p>
+</li>
+<li><p>If the <strong>start state</strong> is an accept state, then the machine accepts the empty string $\epsilon$ because it makes it end at the start state, which is an accept state.</p>
+</li>
 </ul>
 
 </div>
@@ -13199,7 +13202,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Designing-Finite-Automata">Designing Finite Automata<a class="anchor-link" href="#Designing-Finite-Automata">&#182;</a></h3>
+<h3 id="Designing-Finite-Automata">Designing Finite Automata<a class="anchor-link" href="#Designing-Finite-Automata">&#182;</a></h3><h2 id="work-on-this-part">work on this part<a class="anchor-link" href="#work-on-this-part">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13230,6 +13233,172 @@ div#notebook {
 </ul>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<hr>
+<hr>
+<h1>More Examples of Deterministic Finite Automata</h1><label> 
+    $M_2$
+   <img src="./images/img-eight.png" />
+</label><ul>
+<li>The Automaton above accepts any string that end in 0 or is the empty string. The reason why it accepts the empty string is that the start state is an accept state. </li>
+</ul>
+<table style="{color: black; border: 1px solid black; }">
+    <tr style="{color: black; border: 1px solid black; }">
+        <th style="{color: black; border: 1px solid black; }"></th>
+        <th style="{color: black; border: 1px solid black; }">0</th>
+        <th style="{color: black; border: 1px solid black; }">1</th>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }">
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+         <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }">
+         <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+         <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+         <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+    </tr>
+</table><p>$L(M_2) = \{ w \; | \; w = \epsilon \; \lor$ ends with a 0 }</p>
+<p><strong>Definition of $M_2$</strong></p>
+<ol>
+<li>$Q = \{ q_1, q_2 \}$</li>
+<li>$\Sigma = \{0, 1\}$</li>
+<li><p>$\delta:$ represented as</p>
+<table style="{color: black; border: 1px solid black; }">
+ <tr style="{color: black; border: 1px solid black; }">
+     <th style="{color: black; border: 1px solid black; }"></th>
+     <th style="{color: black; border: 1px solid black; }">0</th>
+     <th style="{color: black; border: 1px solid black; }">1</th>
+ </tr>
+ <tr style="{color: black; border: 1px solid black; }">
+     <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+     <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+      <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+ </tr>
+ <tr style="{color: black; border: 1px solid black; }">
+      <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+      <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+      <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+ </tr>
+</table></li>
+<li><p>$q_1$ is the start state</p>
+</li>
+<li><p>$F = \{ q_1 \}$</p>
+</li>
+</ol>
+<p>Lastly the language of $M_2$ is $L(M_2) = \{ w \; | \; w = \epsilon \; \lor w$ ends with a 0 }</p>
+<hr>
+<hr>
+<hr>
+<label> 
+    $M_3$
+   <img src="./images/img-nine.png" width="350px" height="350px"/>
+</label><ol>
+<li>$Q = \{ s, q_1, q_2, r_1, r_2 \}$</li>
+<li>$\Sigma = \{ a, b\} $</li>
+<li>$\delta$ represented as </li>
+</ol>
+<table style="{color: black; border: 1px solid black; }"> 
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <th style="{color: black; border: 1px solid black; }"></th>
+        <th style="{color: black; border: 1px solid black; }">a</th>
+        <th style="{color: black; border: 1px solid black; }">b</th>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$s$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$r_1$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$r_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$r_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$r_1$</td>
+    </tr>
+    <tr> 
+        <td style="{color: black; border: 1px solid black; }">$r_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$r_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$r_1$</td>
+    </tr>
+</table><ol>
+<li><p>s is the start state</p>
+</li>
+<li><p>$F = \{ q_1, r_1 \}$</p>
+</li>
+</ol>
+<p><strong>Error</strong>: $L(M_3) = \{ w \; | \; w$ begin with an "a" and ends with an "a" or $w$ begins with a b and ends with a "b" }</p>
+<ul>
+<li>The answer above is wrong because the language is actually one in which the first symbol is the last symbol: $L(M_3) = \{ w \; | \; w$ start and ends with the same symbol $\}$</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<label> 
+    $M_4$
+   <img src="./images/img-ten.png" width="350px" height="350px"/>
+</label><p><strong>Define</strong>:</p>
+<ol>
+<li>$Q = \{ q_0, q_1, q_2 \}$</li>
+<li>$\Sigma = \{ 0, 1 , 2, \langle RESET \rangle \} $</li>
+<li>$\delta$ represented as </li>
+</ol>
+<table style="{color: black; border: 1px solid black; }"> 
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <th style="{color: black; border: 1px solid black; }"></th>
+        <th style="{color: black; border: 1px solid black; }">0</th>
+        <th style="{color: black; border: 1px solid black; }">1</th>
+        <th style="{color: black; border: 1px solid black; }">2</th>
+        <th style="{color: black; border: 1px solid black; }">$\langle RESET \rangle $</th>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+    </tr>
+    <tr style="{color: black; border: 1px solid black; }"> 
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_2$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_1$</td>
+        <td style="{color: black; border: 1px solid black; }">$q_0$</td>
+    </tr>
+</table><ol>
+<li>$q_0$ is the start state </li>
+<li>$F = \{ q_0 \}$</li>
+</ol>
+<hr>
+<hr>
+<hr>
+<label> 
+    $M_5$
+   <img src="./images/img-one.png" width="350px" height="350px"/>
+</label><p>$L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number of 0's$\} $</p>
+<p>11, 110000 00, 1101, 1101010, 11011111111111</p>
 
 </div>
 </div>
@@ -13445,7 +13614,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 style="{color: black; text-align: center; font-family: 'Times New Roman'; }">The Pumping Lemma for Regular Languages</h2><ul>
-<li><strong>Theorem</strong>: <strong>Pumping Lemma</strong> If $A$ is a regular language, then there is a number $p$ (the pumping length) where if $s$ is any string in $A$ of length at least $p,$ tehn $s$ may be divided into three pieces, $s=xyz,$ staifying the following conditions:<ol>
+<li><strong>Theorem</strong>: <strong>Pumping Lemma</strong> If $A$ is a regular language, then there is a number $p$ (the pumping length) where if $s$ is any string in $A$ of length at least $p,$ then $s$ may be divided into three pieces, $s=xyz,$ staifying the following conditions:<ol>
   <li>for each $i \ge 0, xy^i z \in A$</li>
   <li>$|y| > 0$</li>
   <li>$|xy| \le p$</li>
