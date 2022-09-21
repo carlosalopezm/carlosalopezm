@@ -13313,10 +13313,178 @@ $$$$<table>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Truth-Tables-With-Python">Truth Tables With Python<a class="anchor-link" href="#Truth-Tables-With-Python">&#182;</a></h2><p><b> The code below prints a truth table for the logical staement $\neg p$</b></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">prettytable</span> <span class="kn">import</span> <span class="n">PrettyTable</span>
+<span class="c1"># RUN THIS FIRST</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;~p&quot;</span><span class="p">]</span> 
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span>
+<span class="c1"># header row</span>
+      <span class="c1"># special print statement (ignore syntax for now)</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>            <span class="c1"># loop over elements in values</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="ow">not</span> <span class="n">p</span><span class="p">]</span>        <span class="c1"># list containing elements p, not p</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    
+<span class="n">tab</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">tab</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+-------+-------+
+|   p   |   ~p  |
++-------+-------+
+|  True | False |
+| False |  True |
++-------+-------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <hr>
 <h2 style="color: black; text-align: center; font-family:'Times New Roman'; font-size: 2.25em;"> 1.4: Arguments and Rules of Inference </h2><hr>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr style="border-top: 5px dashed red"/></p>
+<p><h1> The Converse, Inverse, and Contrapositive of an Implication</h1></p>
+<hr style="border-top: 5px dashed red"/>
+
+<ul>
+<li><p>The <strong>contrapositive</strong> of $p \rightarrow q$ is $\neg q \rightarrow \neg p$</p>
+</li>
+<li><p>The <strong>converse</strong> of $p \rightarrow q$ is $q \rightarrow p$</p>
+</li>
+<li><p>The <strong>converse</strong> of $p \rightarrow q$ is $\neg p \rightarrow \neg q$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr style="border-top: 5px dashed red"/></p>
+<p><h1> Properties/ Laws of Propositional Logic </h1></p>
+<hr style="border-top: 5px dashed red"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>1. Identity law</h2><ul>
+<li>$p \land True \equiv p$ </li>
+<li>$p \lor F\!alse \equiv p$</li>
+</ul>
+<hr>
+
+<h2>2. Domination law </h2><ul>
+<li>$p \lor True \equiv True$</li>
+<li>$p \land F\!alse \equiv F\!alse$<hr></li>
+</ul>
+<h2> 3.  Idempotence law </h2><ul>
+<li>$p \lor p \equiv p $</li>
+<li>$p \land p \equiv p$<hr></li>
+</ul>
+<h2> 4. Negation law </h2><ul>
+<li>$p \land \neg p \equiv F\!alse$</li>
+<li>$p \lor \neg p \equiv True$</li>
+</ul>
+<hr>
+
+<h2> 5. Double negation law </h2><ul>
+<li>$\neg \neg p \equiv p$</li>
+</ul>
+<hr>
+
+<h2> 6. Commutativity law </h2><ul>
+<li>$p \land q \equiv q \land p$</li>
+<li>$p \lor q \equiv q \lor p$<hr></li>
+</ul>
+<h2> 7. Associativity law </h2><ul>
+<li>$(p \land q) \land r \equiv p \land (q \land r)$</li>
+<li>$(p \lor q) \lor r \equiv p \lor (q \lor r)$</li>
+</ul>
+<hr> 
+
+<h2> 8. Distributivity law </h2><ul>
+<li>$p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$</li>
+<li>$p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$</li>
+<li>$p \lor (q \lor r) \equiv (p \lor q) \lor (p \lor r)$</li>
+<li>$p \land (q \land r) \equiv (p \land q) \land (p \land r)$</li>
+</ul>
+<hr> 
+
+<h2> 9. Absorption law </h2><ul>
+<li>$p \lor (p \land q) \equiv p$</li>
+<li>$p \land (p \lor q) \equiv p$</li>
+</ul>
+<hr> 
+
+<h2> 10. De Morgan's law </h2><ul>
+<li>$\neg(p \lor q) \equiv \neg p \land \neg q$</li>
+<li>$\neg(p \land q) \equiv \neg p \lor \neg q$</li>
+</ul>
+<hr> 
+
+<h2> 11. Implication to disjunction law</h2><ul>
+<li>$ p \rightarrow q  \equiv \neg p \lor q$</li>
+</ul>
+<hr> 
+
+<h2> 12. IFF to implication law</h2><ul>
+<li>$p \iff q \equiv (p \rightarrow q) \land (q \rightarrow p) \equiv (\neg p \lor q) \land (\neg q \lor p)$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2> Going Over Modus Ponens </h2><ul>
+<li>modus ponens states that p implies q. Then if p is true, the statment can be reduced to the value of q. </li>
+</ul>
 
 </div>
 </div>
@@ -13369,6 +13537,437 @@ $$$$</li>
 </table>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Truth Table for Modus Ponens&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;notice that p -&gt; q is logically equivalent to q&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">prettytable</span> <span class="kn">import</span> <span class="n">PrettyTable</span>
+<span class="n">values1</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span>
+<span class="n">values2</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;p –&gt; q&quot;</span><span class="p">]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span>
+<span class="n">tab</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values2</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span><span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="p">]</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Truth Table for Modus Ponens
+notice that p -&gt; q is logically equivalent to q
++------+-------+--------+
+|  p   |   q   | p –&gt; q |
++------+-------+--------+
+| True |  True |  True  |
+| True | False | False  |
++------+-------+--------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2> Going Over Modus Tollens </h2><ul>
+<li><p>Modus Tollens implies that for $p \rightarrow q$ if $\neg q$ is true, then $q$ is false. Hence, we can conclude $\neg p$</p>
+</li>
+<li><p>Recall that $p \rightarrow q \equiv \neg p \lor q$ Hence if $\neg q$ is true, $\neg p \lor q \equiv \neg p$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Truth Table for Modus Tollens&#39;</span><span class="p">)</span>
+<span class="n">values1</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">values2</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;p –&gt; q&quot;</span><span class="p">,</span> <span class="s2">&quot;~p&quot;</span><span class="p">]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values1</span><span class="p">:</span> 
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values2</span><span class="p">:</span> 
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">p</span><span class="p">]</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">tab</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Truth Table for Modus Tollens
++-------+-------+--------+-------+
+|   p   |   q   | p –&gt; q |   ~p  |
++-------+-------+--------+-------+
+|  True | False | False  | False |
+| False | False |  True  |  True |
++-------+-------+--------+-------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<p><h2>Going Over Simplification</h2></p>
+<hr>
+
+<ul>
+<li>The simplification basically states that if $p \land q$ is true, therefore $p$ is also true. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<p><h2>Going Over Addition</h2></p>
+<hr>
+
+<ul>
+<li>Addition states that if $p$ is true, the statement $p \lor q$ is logically equivalent to $p$ since $p$ is true. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<p><h2>Going Over Conjunction</h2></p>
+<hr>
+
+<ul>
+<li>Conjunction simply implies that both p and q are true so p and q must be true</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<p><h2>Going Over the Hypothetical Syllogism</h2></p>
+<hr>
+
+<ul>
+<li><p>The hypothetical syllogism states that if q implies r ($q \rightarrow r$) and p implies r ($p \rightarrow r$) then p implies r</p>
+</li>
+<li><p>$p \rightarrow q \equiv \neg p \lor q$ and $q \rightarrow r \equiv \neg q \lor r$.</p>
+</li>
+<li><p>Now by resolution proof, if $\neg p \lor q$ is true and $\neg q \lor r$ is true. Then we can conclude that $\neg p \lor r$ is true. Hence we can conclude that $p \rightarrow r$ because $\neg p \lor r \equiv p \rightarrow r$</p>
+</li>
+<li><p>Now if $(p \rightarrow q) \lor (q \rightarrow r) \equiv (\neg p \lor q) \lor (\neg q \lor r) \equiv \neg p \lor r$ since $q \lor \neg q \equiv true$ is a tautology . Hence we can infer that $p \rightarrow r$ because $\neg p \lor r \equiv p \rightarrow q$</p>
+</li>
+</ul>
+<p>Lastly this can be proved through a table</p>
+<p><img width="100%" src="./images1/img-one-1.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$(p \rightarrow q) \land (q \rightarrow r) \rightarrow (p \rightarrow r) \\ \equiv \neg((\neg p \lor q) \land (\neg q \lor r)) \lor (\neg p \lor r) \\ \equiv (p \land \neg q) \lor (q \land \neg r) \lor \neg p \lor r $</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothetical Syllogism&quot;</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">head1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>  <span class="s2">&quot;(p and ~q) or (q and ~r) or ~p or r&quot;</span><span class="p">]</span>
+<span class="n">table1</span> <span class="o">=</span> <span class="p">[</span><span class="n">head1</span><span class="p">]</span>
+<span class="n">tab1</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">p</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">q</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">q</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">r</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">r</span><span class="p">]</span>
+            <span class="n">table1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab1</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table1</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hypothetical Syllogism
++-------+-------+-------+-------------------------------------+
+|   p   |   q   |   r   | (p and ~q) or (q and ~r) or ~p or r |
++-------+-------+-------+-------------------------------------+
+|  True |  True |  True |                 True                |
+|  True |  True | False |                 True                |
+|  True | False |  True |                 True                |
+|  True | False | False |                 True                |
+| False |  True |  True |                 True                |
+| False |  True | False |                 True                |
+| False | False |  True |                 True                |
+| False | False | False |                 True                |
++-------+-------+-------+-------------------------------------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypothetical Syllogism&quot;</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">head1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;~p or q&quot;</span><span class="p">]</span>
+
+<span class="n">table1</span> <span class="o">=</span> <span class="p">[</span><span class="n">head1</span><span class="p">]</span>
+<span class="n">tab1</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="p">]</span>
+        <span class="n">table1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab1</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table1</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab1</span><span class="p">)</span>
+<span class="n">head2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;~q or r&quot;</span><span class="p">]</span>
+
+<span class="n">table2</span> <span class="o">=</span> <span class="p">[</span><span class="n">head2</span><span class="p">]</span>
+<span class="n">tab2</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="ow">not</span> <span class="n">q</span> <span class="ow">or</span> <span class="n">r</span><span class="p">]</span>
+        <span class="n">table2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab2</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table2</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hypothetical Syllogism
++-------+-------+---------+
+|   p   |   q   | ~p or q |
++-------+-------+---------+
+|  True |  True |   True  |
+|  True | False |  False  |
+| False |  True |   True  |
+| False | False |   True  |
++-------+-------+---------+
++-------+-------+---------+
+|   q   |   r   | ~q or r |
++-------+-------+---------+
+|  True |  True |   True  |
+|  True | False |  False  |
+| False |  True |   True  |
+| False | False |   True  |
++-------+-------+---------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;(~p or q) and (~q or r)&quot;</span><span class="p">]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span>
+<span class="n">tab</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">q</span> <span class="ow">or</span> <span class="n">r</span><span class="p">)]</span>
+                <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+
+
++-------+-------+-------+-------------------------+
+|   p   |   q   |   r   | (~p or q) and (~q or r) |
++-------+-------+-------+-------------------------+
+|  True |  True |  True |           True          |
+|  True |  True | False |          False          |
+| False |  True |  True |           True          |
+| False |  True | False |          False          |
+|  True | False |  True |          False          |
+|  True | False | False |          False          |
+| False | False |  True |           True          |
+| False | False | False |           True          |
++-------+-------+-------+-------------------------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<p><h2>Going Over the Disjunctive Syllogism</h2></p>
+<hr>
+
+<ul>
+<li>The disjunctive syllogism states that if $\neg p$ is true, then the statement $p \lor q \equiv q$ because $p$ is false. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Disjunctive Syllogism&quot;</span><span class="p">)</span>
+<span class="n">values1</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;q&quot;</span><span class="p">]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span>
+<span class="n">tab</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">values1</span><span class="p">:</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">q</span><span class="p">]</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">tab</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Disjunctive Syllogism
++-------+
+|   q   |
++-------+
+|  True |
+| False |
++-------+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
