@@ -13106,6 +13106,46 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1>Preliminary Definitions from Lecture</h1><ul>
+<li>An <strong>alphabet</strong> $\Sigma$ is a non-empty set symbols. 
+  Examples: $\Sigma = \{ 1, 0\}, \Sigma = \{ a, b, c\}, \Sigma = \{ a, b, \dots, z\}, \Sigma = \{ A, B, \dots, Z\}, \Sigma = \{ \epsilon, \alpha \}$</li>
+</ul>
+<p><hr> 
+<br></p>
+<ul>
+<li>A string over an alphabet $\Sigma$ is a finite sequence of characters from $\Sigma$</li>
+</ul>
+<p><br></p>
+<ul>
+<li>the length of. a string s, is the number of characters it contains and it is denoted like the cardinality of a set: |s| = k for $k \in \mathbb{Z}^{non-negative}$<ul>
+<li>Examples: |10101| = 5, |$\epsilon$| = 0 (this is the empty string), |ababab| = 6</li>
+</ul>
+</li>
+</ul>
+<p><br>
+<br></p>
+<ul>
+<li><p>concatenation of strings is denoted as $s•t$ and $s•t \neq t*s$ and $|s•t| = |s| + |t|$
+<br></p>
+</li>
+<li><p>$\Sigma^k$ is the set of all string of length k over the alphabet $\Sigma = \{ 0, 1\}$. Hence, $\Sigma^k = \{$ all string of length k over the alphabet $\Sigma^*\} = \bigcup_{k=0}^\infty \Sigma^k$
+<br>
+<br></p>
+<ul>
+<li>Examples: $\Sigma = \{ 1, 0\}, \Sigma^2 = \{ 00, 01, 10, 11\}, \Sigma^3 = \{ 000, 001, 010, 011, 100, 101, 110, 111\}, \Sigma^0 = \{ \epsilon\}$
+<br>
+<br></li>
+</ul>
+</li>
+<li>The language L is regular if there exists a DFA such that L(M) = L " . </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <label style="{color: blue; text-align: center; weight: 900;}">The M1 Automaton<img src="./images/img-one.png" style="{color: red; border: 3px solid black; margin: auto}" /></label>
 </div>
 </div>
@@ -13188,9 +13228,11 @@ div#notebook {
 <li><p>Let <em>M</em>  = ($Q, \Sigma, \delta, q_0, 
 \mathbf{F}$) be a finite automaton and let $\; w = w_1 w_2 \dots w_n$ be a string where each $w_i$ is a member of the alphabet $\Sigma$. Then <em>M</em> <strong>accepts</strong> <em>w</em> if a sequence of states $r_0, r_1, \dots, r_n \in Q$ exists with three conditions:</p>
 <ol>
-  <li> $r_0 = q_0$</li>
-  <li> $\delta(r_i, w_{i+1}) = r_{i+1},$ <bold>for i</bold>= $0, \dots, n-1$ </li>
-  <li>$r_n \in \mathcal{F}$</li>
+  <li> 
+      $r_0 = q_0$ The first state is the start state of the Deterministic Finite Automaton. 
+  </li>
+  <li> $\delta(r_i, w_{i+1}) = r_{i+1},$ <bold>for i</bold>= $0, \dots, n-1$ The nondeterministic finite automaton has a function delta for which the next state is computed for a given state and symbol from the string $w$</li>
+  <li>$r_n \in F$ At the moment that the automaton reads the last symbol of the word w, it ends in an accept state that is in the set $F$</li>
 </ol></li>
 <li><p>A <strong>regular language</strong> is a language that a finite automaton can recognize</p>
 </li>
@@ -13202,7 +13244,35 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Designing-Finite-Automata">Designing Finite Automata<a class="anchor-link" href="#Designing-Finite-Automata">&#182;</a></h3><h2 id="work-on-this-part">work on this part<a class="anchor-link" href="#work-on-this-part">&#182;</a></h2>
+<h3 id="Designing-Finite-Automata">Designing Finite Automata<a class="anchor-link" href="#Designing-Finite-Automata">&#182;</a></h3><ul>
+<li>At the theoretical level, designing a nondeterministic finite automaton implies following the outlined definition of an NFA and a language. </li>
+</ul>
+<p>For instance the simplest automaton can be one in which the start state is an accept state such that any string over the alphabet $\Sigma = \{ 0,1 \}$ is accepted.</p>
+<p><img width="350px" height="350px" src="./images/design-one.png" /></p>
+<p>The automaton above M<em> can be defined as a 5-tuple: $M</em> = (Q, \Sigma, \delta, q_0, F)$</p>
+<ol>
+<li><p>$Q = \{ q_0 \}$
+2 $\Sigma = \{ 0, 1 \}$</p>
+</li>
+<li></li>
+</ol>
+<table>
+    <tr>
+        <th>$0$</th>
+        <th>$1$</th>
+        <th>$\epsilon$</th>
+    </tr>
+    <tr>
+        <td>$q_0$</td>
+        <td>$q_0$</td>
+        <td>$q_0$</td>
+    </tr>
+</table><ol>
+<li>$q_0 \in Q$ is the start state </li>
+</ol>
+<p>5 $F \subseteq Q$</p>
+<p>$L(M*) = \{ \Sigma = \{0, 1\} | \Sigma^* \}$</p>
+
 </div>
 </div>
 </div>
@@ -13398,15 +13468,62 @@ div#notebook {
 <hr>
 <hr>
 <hr>
-<p><label> 
+<label> 
     $M_5$
    <img src="./images/img-one.png" width="350px" height="350px"/>
-</label></p>
-<ul>
-<li>error 
-$L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number of 0's$\} $</li>
-</ul>
+</label>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$L(M_5) = \{ w | w$ ends with a 1 or $w$ has an odd number of 1' and an even number of 0's$\} $</p>
 <p>11, 110000 00, 1101, 1101010, 11011111111111</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img  height="570px" width="570px" src="./images/problem1.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="sol:">sol:<a class="anchor-link" href="#sol:">&#182;</a></h3><p>$M_1$</p>
+<ul>
+<li>$q_1$ is the start state </li>
+<li>$F = \{ q_2\}$</li>
+<li>for aabb $q_1 \rightarrow q_2 \rightarrow  q_3 \rightarrow q_1 \rightarrow q_1$</li>
+<li>The DFA $M_1$ does not accept the string because it does not end in an accept state. </li>
+<li>$M_1$ does not accept the string $\epsilon$ since it remains in its start state which is not an accept state: $q_1 \notin F$</li>
+</ul>
+<p>$M_2$</p>
+<ul>
+<li>$q_1$ is the start state </li>
+<li>$F = \{ q_1, q_4\}$</li>
+<li>for aabb $q_1 \rightarrow q_1 \rightarrow  q_1 \rightarrow q_2 \rightarrow q_4$</li>
+<li>The DFA $M_2$ does accept the string because it does end in an accept state. </li>
+<li>$M_2$ does accept the string $\epsilon$ since it remains in its start state which is an accept state.</li>
+</ul>
 
 </div>
 </div>
@@ -13438,21 +13555,12 @@ $L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number 
 <img src="./images/img-two.png" height="350px" width="350px"/></li>
 </ul>
 <hr>
-<p><strong>Ex</strong>
+<p><strong>Example</strong>
 <img src="./images/img-three.png" height="450px" width="450px"/>
 • Let $N_1$ be the automaton above. As shown in the diagram below, the string "010110" is accepted since one of the copies of $N_1$ ends in an accept state at the end of the input. By contrast a string such as "01" or "10" are not accepted because none of the copies of $N_1$ end in an accept state.</p>
+<p>Take a look at the diagram below to grasp how the finite automaton works for a string that it accepts.</p>
+<p><img src="./images/diagram-one.png" height="450px" width="450px"/></p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<!-- Forking with an  NFA in C-->
-
-<!--add a C program that uses fork 
-- show how you can build a representation of a nondeterministic automaton using the fork function 
--->
 </div>
 </div>
 </div>
@@ -13543,8 +13651,8 @@ $L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number 
 <ul>
 <li><strong>regular expressions</strong>: expressions made to describe languages through regular operations<ul>
 <li>The value of a regular expression is a language.</li>
-<li>Ex # $(0 \cup 1)0^* = (0 \cup 1) \circ 0^* $. This regular expression has a value that equates to the language consisting of all strings starting with a 0 or a 1 followed by an arbitrary number of 0s (0 or n where n $\in \mathbb{Z}$.</li>
-<li>Ex # $(0 \cup 1)^*$ The value of this expression is the language consisting of all possible strings of 0s and 1s. Additionally, you can write $\Sigma$ as a shorthand for the regular expression $(0 \cup 1)$. Hence, <b>$(0 \cup 1)0^* = (0 \cup 1) \circ 0^* = \Sigma^*$</b></li>
+<li><strong>Example</strong> # $(0 \cup 1)0^* = (0 \cup 1) \circ 0^* $. This regular expression has a value that equates to the language consisting of all strings starting with a 0 or a 1 followed by an arbitrary number of 0s (0 or n where n $\in \mathbb{Z}$.</li>
+<li><strong>Example</strong> # $(0 \cup 1)^*$ The value of this expression is the language consisting of all possible strings of 0s and 1s. Additionally, you can write $\Sigma$ as a shorthand for the regular expression $(0 \cup 1)$. Hence, <b>$(0 \cup 1)0^* = (0 \cup 1) \circ 0^* = \Sigma^*$</b></li>
 </ul>
 </li>
 <li>In regular expressions, the star operation is done first, followed by concatenation, and finally union, unless parentheses change the usual order.</li>
@@ -13562,26 +13670,38 @@ $L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number 
 <div style="{color: black; border: 3px solid black; padding: 1.15em 1.15em 1.15em 1.15em;">
     <ol> 
         <li>$a$ for some $a$ in the alphabet $\Sigma$ (the langauge {a})</li>
-        <li>$\epsilon$ (the langauge {$\epsilon$ or the langguage that contains the empty string {{""}} = {$\emptyset$}) </li>
+        <li>$\epsilon$ the langauge containing the empty string $\{ \epsilon \}$</li>
         <li>$\emptyset$ (the empty language or the language without any string {})</li>
         <li>($R_1 \cup R_2$), where $R_1$ and $R_2$ are regular expressions</li>
          <li>($R_1 \circ R_2$), where $R_1$ and $R_2$ are regular expressions</li>
-         <li>$R_1^*$, where $R_1$ is a regular expression</li>
+         <li>($R_1^*$), where $R_1$ is a regular expression</li>
     </ol>
 </div><ul>
 <li><p>Regarding 4 and 5, it is true that there may seem to be a <strong>circular definition</strong> of the regular expression, but the truth is that $R_1$ and $R_2$ will always be smaller than $R$. Hence, it is an <strong>inductive definition</strong>.</p>
+</li>
+<li><p>Let $R^+$ be the shorthand for $RR^*$. In other words, whereas $R^*$ has all strings that are 0 or more concatenations of strings from $R$, the language $R^+$ has all strings that are one or more concatenations of strings from $R$.</p>
+</li>
+<li><p>Now let $A = R^+ \cup \epsilon = R^*$ since the empty string was added to the set of possible values we return to the set oall strings that are 0 or more concatenations of strings from R</p>
+</li>
+</ul>
+<hr>
+
 <ul>
-<li><strong>Proof</strong></li>
+<li>To distinguish between a regular expression $R$ and the language that it describes, we write $L(R)$ to be the language of $R$. </li>
+</ul>
+<p><hr style="border-top: 3px dashed green;"/>
+<img src="./images/fig-153.png" width="450px" height="450px"/>
+Th examples above show the distinct ways in which a regular expression can be used to describe a lanagauge.</p>
+<hr style="border-top: 3px dashed green;"/>
+
+
+<ul>
+<li>An <strong>inductive definition</strong> is one in which the smaller expressions are used to define larger expressions. </li>
+<li>The <strong>length</strong> of a string is the number of symbols/characters that the string contains". This can be written as $|w| = k$ for $k \in \mathbb{Z}^{nonnegative}$<ul>
+<li>The empty string has a length of 0 </li>
 </ul>
 </li>
-<li></li>
-<li><p>An <strong>inductive definition</strong> is one in which the smaller expressions are used to define larger expressions.</p>
-</li>
-<li>The <strong>length</strong> of a string is the number of symbols/characters that the string contains"<ul>
-<li>The empty string has a length of 0 (<strong>Prove it is true</strong>)</li>
-</ul>
-</li>
-<li><strong>Tokens</strong> are elemental objects such as varaible names and constants in a programming language</li>
+<li><strong>Tokens</strong> are elemental objects such as variable names and constants in a programming language</li>
 <li>If the syntax of a programming language has been described with a regular expression in terms of its tokens, automatic systems can generate the <b><em>lexical analyzer</em></b> which is the part of a compiler that initially processes the input program. </li>
 </ul>
 
@@ -13591,19 +13711,113 @@ $L(M_5) = \{ w | w$ ends with a 1 or $w$ begins with a 1 and has an even number 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 style="{color: black; text-align: center; }">Equivalence with Finite Automata</h2><ul>
+<hr style="border-top: 10px dashed blue;"/>
+
+<h2 style="{color: black; text-align: center; }">Equivalence with Finite Automata</h2><div style="{color: black; border: 2px solid black; padding: 1.1em 1.1em 1.1em 1.1em}">A <b>Generalized Nondeterministic Finite Automaton (GNFA)</b> is a 5-tuple, $(\mathcal{Q}, \Sigma, \delta, q_{start}, q_{accept}),$ where 
+    <ol>
+        <li>$\mathcal{Q}$ is the finite set of states</li>
+        <li> $\Sigma$ is the input alphabet</li>
+        <li> $\delta: (\mathcal{Q} - \{ q_{accept} \}) \times (\mathcal{Q} - \{ q_{start} \}) \longrightarrow \mathcal{R}$ is the transition function</li>
+        <li>$q_{start}$ is the start state</li>
+         <li>$q_{accept}$ is the accept state</li>
+    </ol>
+</div><hr>
+
+
+<ul>
 <li><strong>Theorem</strong> A language is regular if and only if some regular expression describes it. </li>
-<li><strong>Lemma</strong> If a language is described by a regular expression, then it is regular. <div style="{color: black; border: 2px solid black; padding: 1.1em 1.1em 1.1em 1.1em}">A <b>Generalized Nondeterministic Finite Automaton (GNFA)</b> is a 5-tuple, $(\mathcal{Q}, \Sigma, \delta, q_{start}, q_{accept}),$ where 
-  <ol>
-      <li>$\mathcal{Q}$ is the finite set of states</li>
-      <li> $\Sigma$ is the input alphabet</li>
-      <li> $\delta: (\mathcal{Q} - \{ q_{accept} \}) \times (\mathcal{Q} - \{ q_{start} \}) \longrightarrow \mathcal{R}$ is the transition function</li>
-      <li>$q_{start}$ is the start state</li>
-       <li>$q_{accept}$ is the accept state</li>
-  </ol>
-</div></li>
+</ul>
+<ul>
+<li><strong>Lemma</strong> If a language is described by a regular expression, then it is regular. </li>
 </ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr style="border-top: 3px dashed green;"/>
+
+<ul>
+<li><p>$R \cup \emptyset = R$ since adding the empty language to another language will not change the language.</p>
+</li>
+<li><p>$R \circ \epsilon = R$ since joining the empty string to any string will not change it.</p>
+</li>
+</ul>
+<p><strong>Notice that swapping $\emptyset$ and $\epsilon$ can cause the preceding identties to fail</strong></p>
+<ul>
+<li>It is enough to come up with a counter example to show that $\exists R  s.t. R \cup \epsilon \neq R$</li>
+<li>Let $R = 0$ then $L\{R\} = \{0\}$ but $L{R \cup \epsilon} = \{0,  \epsilon \}$</li>
+</ul>
+<p>Likewise, $\exists R$ s.t. $R \circ \emptyset \neq R$</p>
+<ul>
+<li>Let $R = 0$ then $L(R) = \{ 0\}$ but $L(R \circ \emptyset) = \emptyset$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>What is relevant about the equivalence with finite Automata? </li>
+<li>Primarily the fact that we can convert across DFA's, NFA's, and GNFA's</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr style="border-top: 3px dashed green;"/>
+
+<p>Examples:</p>
+<ul>
+<li><p>Convert the expression $(ab \cup a)^*$ to an NFA in a sequnce of stages.</p>
+</li>
+<li><p>To convert a regex into an NFA, we must start by building up from the smallest subexpressions to larger subexpressions until we have an NFA for the original regex.</p>
+</li>
+</ul>
+<p><img src="./images/fig-156.png" width="550px" height="650px" alt="converting a regex into an NFA p1" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr style="border-top: 3px dashed blue;"/></p>
+<hr style="border-top: 3px dashed blue;"/>
+
+<h2>Generalized Nondeterministic Finite Automaton</h2><ul>
+<li><p>GNFAs are simply NFAs where the transition arrows may have aby tegular expression as labels, instead of only members of the alphabet or $epsilon$</p>
+</li>
+<li><p>The GNFA reads reads blocks of symbols from the input rather than always reading only one symbol at a time as an NFA would.</p>
+</li>
+</ul>
+<h4>Conditions that a GNFA must meet</h4><ul>
+<li><p>The <strong>start state has transition arrows going to every other state but no arrows coming-in from any other state</strong>.</p>
+</li>
+<li><p>There is only <strong>a single accept state</strong>, and it has arrows coming in from every other state but no arrows going to any other state. Furthermore, the accept state is not the same as the start state.</p>
+</li>
+<li><p>Except for the start and accept state, one arrow goes from every state to every other state and also from each state to itself.</p>
+</li>
+</ul>
+<p><img src="./images/fig-161.png" width="650px" height="580px"/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr style="border-top: 3px dashed blue;"/></p>
+<hr style="border-top: 3px dashed blue;"/>
+
+<h2>Convert a DFA into a GNFA</h2>
 </div>
 </div>
 </div>
